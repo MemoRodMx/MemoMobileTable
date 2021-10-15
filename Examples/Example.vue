@@ -13,18 +13,14 @@
       <Cell prop="destino" label="Destino"></Cell>
       <Cell prop="num_integracion" label="# Integración"></Cell>
       <Cell prop="num_inbond" label="# Inbond"></Cell>
-      <Cell prop="salida_base" label="Salida base">
-        <template v-slot="scope">
-            <el-button
-              type="info"
-              size="mini"
-              @click="accion1(scope.row.id)"
-            >
-              Accion
-            </el-button>
-        </template>
-      </Cell>
+      <template v-slot:actions="scope">
+        <el-button type="info" size="mini" @click="accion1(scope.row.id)">
+          Accion
+        </el-button>
       </template>
+    </mobile-table>
+  </div>
+</template>
     </mobile-table>
   </div>
 </template>
